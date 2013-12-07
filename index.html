@@ -11,7 +11,16 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="styles/264aad01.main.css"/>
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap2.css">
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css">
+        <!-- <link rel="stylesheet" href="styles/flat-ui.css"/> -->
+        <!-- <link rel="stylesheet" href="styles/vinibar.css"/>
+        <link rel="stylesheet" href="styles/login.css"/> -->
+        <link rel="stylesheet" href="styles/ionic.css"/>
+        <link rel="stylesheet" href="styles/main.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <!-- endbuild -->
 </head>
   <body ng-app="vinifyApp">
     <!--[if lt IE 7]>
@@ -51,7 +60,7 @@
 
   </div>
  -->
-<pane nav-router="" animation="slide-left-right-ios7">
+<pane nav-router animation="slide-left-right-ios7">
       <!-- The nav bar that will be updated as we navigate -->
       <nav-bar class="nav-title-slide-ios7" type="bar-light" back-button-type="button-icon" back-button-icon="icon ion-arrow-left-c"></nav-bar>
 
@@ -73,13 +82,37 @@
        ga('send', 'pageview');
     </script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
 
-        <script src="scripts/6ef5c5aa.plugins.js"></script>
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls-0.7.0.js"></script>
+        <!-- endbuild -->
 
-        <script src="scripts/5fd0b1b6.modules.js"></script>
+        <!-- build:js scripts/modules.js -->
+        <script src="bower_components/ionic/ionic.js"></script>
+        <script src="bower_components/ionic/ionic-angular.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-others/angular-touch.js"></script>
+        <script src="bower_components/angular-others/angular-animate.js"></script>
+        <script src="bower_components/angular-others/angular-sanitize.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular-animate.js"></script>
+        <!-- endbuild -->
 
-        <script src="scripts/91db14d4.scripts.js"></script>
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/vinibar.js"></script>
+        <script src="scripts/controllers/winelist.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/modal.js"></script>
+        <script src="scripts/services/CurrentWines.js"></script>
+        <script src="scripts/services/vinibar-resources.js"></script>
+        <script src="scripts/services/RatedWines.js"></script>
+        <script src="scripts/controllers/vinibar.js"></script>
+        <script src="scripts/controllers/wine-rating.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
