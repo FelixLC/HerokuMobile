@@ -21,19 +21,22 @@
 
  -->
  <nav-page title="mytitle" id="Vinify">
-   <div class="conteneur">
-      <content has-header="true" has-footer="true" scroll="true">
 
-          <div class="list card">
+   <content has-header="true" has-footer="false" scroll="true">
+     <div class="conteneur">
+        
 
-            <a ng-repeat="pet in WINES" class="item item-icon-left" href="#/vinibar/wines/{{$index + 1}}">
-              <i class="icon ion-wineglass"></i>
-              <h3>{{pet.domaine}}</h3>
-              <p>{{pet.appellation}} <span class="badge badge-{{pet.couleur}}">{{pet.millesime}}</span></p>
+            <div class="list card">
 
-            </a>
+              <a ng-repeat="pet in WINES" class="item item-icon-left" href="#/vinibar/wines/{{$index + 1}}">
+                <i class="icon ion-wineglass"></i>
+                <h3>{{pet.domaine}}</h3>
+                <p>{{pet.appellation}} <span class="badge badge-{{pet.couleur}}">{{pet.millesime}}</span></p>
 
-          </div>
-        </content>
-  </div>
+              </a>
+
+            </div>
+          
+    </div>
+  </content>
 </nav-page>

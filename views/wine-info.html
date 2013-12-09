@@ -26,24 +26,43 @@
 
 	  <div class="item item-avatar">
 	  <img src="../images/castle.svg">
-	    <h2>{{WINE[id].domaine}}</h2>
-	    <p>{{WINE[id].appellation}}</p>
+	    <h2>{{WINE[id].domaine}}<span class="badge badge-{{WINE[id].couleur}}">{{WINE[id].millesime}}</span></h2>
+	    <p>{{WINE[id].appellation}} <span class="item-note">Gamay</span> </p>
+
+
 	  </div>
+
+	  <div class="item item-divider">
+	    	Description
+		</div>
 
 	  <div class="item item-body">
 	    <p>
-	      {{WINE[id].description}}
+	      Véritable révélation du Languedoc consacrée sur le terroir de la montagne d’Alaric en Corbières, le Château de la Baronne produit en bio des cuvées somptueuses, précises et franches. Très vieilles vignes et pur cépage, sélection de terroirs parfaitement accomplie, les vins que nous proposons aujourd’hui sont tout simplement exceptionnels … 
+	    </p>
+	  </div>
+
+	  <div class="item item-divider">
+	    	Dégustation
+		</div>
+
+	  <div class="item item-body">
+	    <p>
+	      <i class="icon ion-thermometer"></i> 12°C <span id="carafe"><i class="icon ion-beaker"></i>2h avant </span>
+	    </p>
+	    <p>
+	      Accords Mets / Vin :
 	    </p>
 	  </div>
 
 	  <div class="item tabs tabs-secondary tabs-icon-left">
-	    <a class="tab-item" href="#/vinibar/rating/{{id + 1}}">
+	    <a class="tab-item noter" href="#/vinibar/rating/{{id + 1}}">
 	      <i class="icon ion-chatbox"></i>
 	      Noter ce vin
 	    </a>
-	    <a class="tab-item" href="mailto:antoine@vinify.co?subject=Commande%20de%20{{WINE[id].domaine}}">
+	    <a class="tab-item" href="mailto:antoine@vinify.co?subject=Tamère%20de%20{{WINE[id].domaine}}&body=Bonjour%2C%0AJe%20voudrais%20effectuer%20une%20commande%20de%20vin.%0A%0AR%C3%A9f%C3%A9rence%3A%20{{WINE[id].domaine}},%20{{WINE[id].appellation}},%20{{WINE[id].millesime}}%0ANombre%20de%20caisses%3A%20%5BX%5D%0A%0AMerci%20de%20m'indiquer%20la%20disponibilit%C3%A9.%0A%0ACordialement%2C%0A">
 	      <i class="icon ion-share"></i>
-	      Commander une caisse
+	      Commander
 	    </a>
 	  </div>
 
